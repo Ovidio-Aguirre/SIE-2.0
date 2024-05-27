@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modela tus ingresos</title>
+    <link rel="stylesheet" href="seccion3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Modela tus ingresos</h1>
+        <form id="sales-form">
+            <div class="form-group">
+                <label for="product">Producto</label>
+                <input type="text" id="product" name="product" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Precio</label>
+                <input type="number" id="price" name="price" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" name="quantity" required>
+            </div>
+            <button type="submit">Agregar Venta</button>
+        </form>
+        <table class="sales-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Ingreso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="sales-body">
+                <!-- Las ventas se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+        <div class="total-income">
+            <h2>Ingreso Total: $<span id="total-income">0.00</span></h2>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Retroceder</button>
+    <script src="seccion3.js"></script>
+</body>
+</html>

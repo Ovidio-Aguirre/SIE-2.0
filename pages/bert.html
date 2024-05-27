@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bert.css">
+    <title>Asistente virtual</title>
+</head>
+
+<body>
+    <div class="bert-container">
+        <h1>Interfaz de Inteligencia Artificial</h1>
+        <textarea id="pregunta" placeholder="Escribe tu pregunta aquí..."></textarea>
+        <button id="enviar">Enviar Pregunta</button>
+        <div id="respuesta" class="respuesta"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/qna"></script>
+    <script src="bert.js"></script>
+    <button class="back-button" onclick="goBack()">Retroceder</button>
+</body>
+
+</html>

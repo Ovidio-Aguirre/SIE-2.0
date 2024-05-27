@@ -1,0 +1,125 @@
+/* Estilos para la página "Diseña Tu Alcance" */
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fafafb;
+}
+
+.tabla-alcance {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.tabla-alcance th,
+.tabla-alcance td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-alcance th {
+    background-color: #f2f2f2;
+}
+
+.tabla-alcance td[contenteditable="true"] {
+    background-color: #f9f9f9;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Media queries para hacer responsive */
+
+
+/* Para pantallas de hasta 768px de ancho */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 24px;
+    }
+    .tabla-alcance th,
+    .tabla-alcance td {
+        padding: 6px;
+    }
+    button {
+        padding: 8px 16px;
+    }
+}
+
+
+/* Estilos para el botón de retroceso */
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior según necesites */
+    left: 20px;
+    /* Ajusta la distancia desde el borde izquierdo según necesites */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #ffffff;
+    /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para el efecto de elevación */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+
+/* Para pantallas de hasta 576px de ancho */
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 20px;
+    }
+    .tabla-alcance th,
+    .tabla-alcance td {
+        padding: 4px;
+    }
+    button {
+        padding: 6px 12px;
+    }
+}

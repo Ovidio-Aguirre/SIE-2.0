@@ -1,0 +1,76 @@
+/* Estilos para la página de inicio */
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    /* Color de fondo */
+    padding: 80px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading {
+    font-size: 28px;
+    color: #fafafb;
+    /* Color del texto */
+}
+
+.home-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.option {
+    background-color: #ffffff;
+    /* Color de fondo de las opciones */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.option:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el mouse */
+}
+
+.option img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+.option p {
+    font-size: 18px;
+    color: #333333;
+    /* Color del texto */
+}
+
+
+/* Estilos responsivos */
+
+@media screen and (max-width: 768px) {
+    .home-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-container {
+        grid-template-columns: 1fr;
+    }
+}

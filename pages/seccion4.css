@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ :root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    height: 100vh;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+
+/*PERFIL*/
+
+.perfil h1 {
+    color: var(--white);
+}
+
+.perfil span {
+    color: var(--white);
+    letter-spacing: 1px;
+}
+
+#fecha {
+    color: var(--white);
+    padding: 50px 0 5px 0px;
+}
+
+
+/*AGREGAR TAREA*/
+
+.agregar-tarea {
+    background-color: var(--white);
+    border-radius: 15px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 10px;
+    margin: 40px 0;
+}
+
+.agregar-tarea input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--white);
+    padding-left: 10px;
+}
+
+.agregar-tarea input::placeholder {
+    font-size: 1.1rem;
+    color: var(--purple);
+}
+
+.agregar-tarea i {
+    font-size: 50px;
+    color: var(--purple);
+}
+
+.agregar-tarea i:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+/*SECCION DE TAREA */
+
+.seccion-tarea h3 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.seccion-tarea li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, var(--blue-dark), var(--green));
+    border-radius: 15px;
+    padding: 10px;
+    color: var(--white);
+    margin: 5px 0;
+}
+
+.seccion-tarea i {
+    font-size: 25px;
+}
+
+.seccion-tarea>ul p {
+    font-size: 1.2rem;
+}
+
+.seccion-tarea i:hover {
+    color: var(--blue-light);
+    cursor: pointer;
+}
+
+.line-through {
+    text-decoration: line-through;
+    color: var(--blue-light);
+}
+
+
+/* Estilos para el botón de retroceso */
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior según necesites */
+    left: 20px;
+    /* Ajusta la distancia desde el borde izquierdo según necesites */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #ffffff;
+    /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para el efecto de elevación */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+
+/* Media queries para dispositivos m�s peque�os */
+
+@media screen and (max-width: 600px) {
+    .checklist-container {
+        width: 100%;
+        /* Cambiar el ancho del contenedor al 100% en pantallas m�s peque�as */
+    }
+}

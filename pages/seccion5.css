@@ -1,0 +1,95 @@
+/* Estilos para el sistema de selección basado en tarjetas */
+
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h2 {
+    color: #fafafb;
+    margin-bottom: 50px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+    align-items: center;
+}
+
+.card {
+    width: calc(33.33% - 5px);
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 10%;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.card p {
+    padding: 10px;
+    color: #333333;
+}
+
+.selected {
+    border-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+
+/* Estilos para el botón de retroceso */
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior según necesites */
+    left: 20px;
+    /* Ajusta la distancia desde el borde izquierdo según necesites */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #ffffff;
+    /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para el efecto de elevación */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    /* Cambia el color de fondo al pasar el ratón por encima */
+}

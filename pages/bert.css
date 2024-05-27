@@ -1,0 +1,111 @@
+:root {
+    --white: #fafafb;
+    --purple: #9a67ea;
+    --blue-light: #04d4c3;
+    --blue-dark: #2a73c2;
+    --green: #2c7b90;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, var(--purple), var(--blue-light));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.bert-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#pregunta {
+    width: calc(100% - 20px);
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#enviar {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.respuesta {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+
+/* Media queries para diferentes tamaños de pantalla */
+
+@media (max-width: 768px) {
+    .bert-container {
+        padding: 15px;
+    }
+    #pregunta,
+    #enviar {
+        width: calc(100% - 30px);
+    }
+}
+
+@media (max-width: 480px) {
+    .bert-container {
+        padding: 10px;
+    }
+    #pregunta,
+    #enviar {
+        width: calc(100% - 20px);
+        font-size: 14px;
+    }
+    .respuesta {
+        font-size: 14px;
+    }
+}
+
+
+/* Estilos para el botón de retroceso */
+
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    /* Ajusta la distancia desde la parte inferior según necesites */
+    left: 20px;
+    /* Ajusta la distancia desde el borde izquierdo según necesites */
+    z-index: 9999;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: #007bff;
+    /* Color de fondo del botón */
+    color: #ffffff;
+    /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Sombra para el efecto de elevación */
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+    /* Cambia el color de fondo al pasar el ratón por encima */
+}
